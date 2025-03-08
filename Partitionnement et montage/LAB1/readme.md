@@ -83,7 +83,7 @@ free -m
 ```bash
 sudo fdisk /dev/sdb
 ```
-![hostonly](Images/free.png)
+![hostonly](Images/free1.png)
 
 ```bash
 sudo mkswap /dev/sdb2
