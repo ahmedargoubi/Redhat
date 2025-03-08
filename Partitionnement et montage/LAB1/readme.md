@@ -78,12 +78,13 @@ sudo umount /mnt
 ```bash
 free -m
 ```
+![hostonly](Images/free.png)
 
 ### 12. Création et activation d'une partition swap de 1G
 ```bash
 sudo fdisk /dev/sdb
 ```
-![hostonly](Images/free1.png)
+![hostonly](Images/fdisk2.png)
 
 ```bash
 sudo mkswap /dev/sdb2
