@@ -19,16 +19,13 @@ sudo fdisk -l
 ### 2. Création d'une nouvelle partition de 500 Mo
 ```bash
 sudo fdisk /dev/sdb
-# Tapez "n" pour nouvelle partition, "p" pour primaire, choisissez 1 comme numéro de partition
-# Définissez la taille à 500M
-# Tapez "w" pour sauvegarder et quitter
 ```
 
 ![hostonly](Images/fdisk1.png)
 
 ### 3. Vérification de la création de la partition
 ```bash
-sudo fdisk -l /dev/sdb
+sudo lsblk
 ```
 ![hostonly](Images/lsblk.png)
 
@@ -67,7 +64,7 @@ df -h | grep /mnt
 ### 9. Montage automatique au démarrage
 Ajoutez cette ligne dans `/etc/fstab` :
 ```bash
-echo '/dev/sdb1 /mnt ext3 defaults 0 2' | sudo tee -a /etc/fstab
+echo '/dev/sdb1 /mnt ext3 defaults 0 2' >> /etc/fstab
 ```
 
 ### 10. Démontage de la partition
@@ -85,9 +82,6 @@ free -m
 ### 12. Création et activation d'une partition swap de 1G
 ```bash
 sudo fdisk /dev/sdb
-# Créer une nouvelle partition (n), définir la taille à 1G
-# Changer le type en swap (t -> 82)
-# Sauvegarder (w)
 ```
 ![hostonly](Images/free.png)
 
@@ -102,7 +96,7 @@ sudo swapon /dev/sdb2
 ### 13. Montage automatique du swap
 Ajoutez cette ligne à `/etc/fstab` :
 ```bash
-echo '/dev/sdb2 none swap sw 0 0' | sudo tee -a /etc/fstab
+echo '/dev/sdb2 none swap sw 0 0' >> /etc/fstab
 ```
 
 ### 14. Vérification de l'espace swap
