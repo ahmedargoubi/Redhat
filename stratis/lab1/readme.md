@@ -114,6 +114,6 @@ umount /stratisvol /stratisvol-snap
 stratis filesystem destroy stratispool2 stratis-filesystem1-snap
 stratis filesystem destroy stratispool2 stratis-filesystem1
 ```
- ![hostonly](cap/cap8.png)
+
 
  ![hostonly](cap/cap9.png)
