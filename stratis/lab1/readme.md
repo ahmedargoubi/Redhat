@@ -13,6 +13,7 @@ Ce guide détaille les étapes de gestion du stockage en utilisant Stratis pour 
 ```sh
 sudo yum install -y stratisd stratis-cli
 ```
+ ![hostonly](cap/cap1.png)
 
 ### 2. Activation du service Stratis
 ```sh
@@ -28,7 +29,7 @@ sudo yum install -y stratisd stratis-cli
 ```sh
 stratis pool list
 ```
- ![hostonly](cap/cap1.png)
+ ![hostonly](cap/cap2.png)
  
 ### 5. Ajout d'un périphérique au pool
 ```sh
@@ -39,13 +40,13 @@ stratis pool list
 ```sh
 stratis pool list
 ```
- ![hostonly](cap/cap2.png)
+ ![hostonly](cap/cap3.png)
  
 ### 7. Vérification des périphériques de bloc
 ```sh
 stratis blockdev list
 ```
- ![hostonly](cap/cap3.png)
+ ![hostonly](cap/cap4.png)
  
 ## Gestion du système de fichiers Stratis
 
@@ -58,7 +59,7 @@ stratis blockdev list
 ```sh
 stratis filesystem list
 ```
- ![hostonly](cap/cap4.png)
+ ![hostonly](cap/cap5.png)
  
 ### 10. Création et montage du volume
 ```sh
@@ -70,7 +71,7 @@ stratis filesystem list
 ```sh
 mount | grep stratis
 ```
- ![hostonly](cap/cap5.png)
+ ![hostonly](cap/cap6.png)
 
  
 ### 12. Création de fichiers de test
@@ -83,7 +84,7 @@ sudo dd if=/dev/urandom of=/stratisvol/file2 bs=1M count=2048
 ```sh
 stratis filesystem list
 ```
- ![hostonly](cap/cap6.png)
+ ![hostonly](cap/cap7.png)
 
 ## Gestion des snapshots
 
@@ -96,7 +97,7 @@ stratis filesystem list
 ```sh
 stratis filesystem list
 ```
- ![hostonly](cap/cap7.png)
+ ![hostonly](cap/cap8.png)
 
  
 ### 16. Suppression et récupération de fichiers
@@ -115,4 +116,4 @@ stratis filesystem destroy stratispool2 stratis-filesystem1
 ```
  ![hostonly](cap/cap8.png)
 
- ![hostonly](cap/cap1.png)
+ ![hostonly](cap/cap9.png)
