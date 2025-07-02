@@ -124,7 +124,7 @@ id fabrice
 sudo su - fabrice
 
 # Configurer umask pour les dossiers
-echo "umask 002" >> ~/.bashrc
+echo "umask 001" >> ~/.bashrc
 source ~/.bashrc
 
 # Tester
