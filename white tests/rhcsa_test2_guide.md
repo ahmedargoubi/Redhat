@@ -22,14 +22,14 @@ Contenu du fichier :
 name=CentOS BaseOS
 baseurl=http://vault.centos.org/$contentdir/$releasever/BaseOS/$basearch/os/
 enabled=1
-gpgcheck=1
+gpgcheck=0
 
 
 [AppStream]
 name=CentOS AppStream
 baseurl=http://vault.centos.org/$contentdir/$releasever/AppStream/$basearch/os/
 enabled=1
-gpgcheck=1
+gpgcheck=0
 
 ```
 
