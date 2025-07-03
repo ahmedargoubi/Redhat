@@ -23,14 +23,14 @@ name=CentOS BaseOS
 baseurl=http://vault.centos.org/$contentdir/$releasever/BaseOS/$basearch/os/
 enabled=1
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
 
 [AppStream]
 name=CentOS AppStream
 baseurl=http://vault.centos.org/$contentdir/$releasever/AppStream/$basearch/os/
 enabled=1
 gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-centosofficial
+
 ```
 
 ```bash
